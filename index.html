@@ -22,7 +22,7 @@
         <div class="hero-copy">
           <p class="eyebrow">For small agencies and B2B service teams</p>
           <h1>Every new inquiry gets one clear owner.</h1>
-          <p class="lede">I clean the list, simplify the pipeline, and connect one lead form to the right person—within 72 hours, using the tools you already have.</p>
+          <p class="lede">I clean the list, simplify the pipeline, and connect one lead form to the right person—within 72 hours of receiving the agreed access and source data, using the tools you already have.</p>
           <div class="actions">
             <a class="button primary" href="#calculator">Estimate the leak</a>
             <a class="button secondary" href="#offer">See the exact scope</a>
@@ -50,14 +50,14 @@
             <p>Use your rough monthly numbers. The calculator runs only in your browser and sends nothing anywhere.</p>
           </div>
           <form class="calculator" id="leak-calculator">
-            <label>New leads per month <input id="leads" name="leads" type="number" min="0" step="1" value="40" /></label>
-            <label>Average sale value (€) <input id="deal-value" name="dealValue" type="number" min="0" step="50" value="1500" /></label>
-            <label>Current close rate (%) <input id="close-rate" name="closeRate" type="number" min="0" max="100" step="1" value="15" /></label>
-            <label>Leads delayed or unowned (%) <input id="leak-rate" name="leakRate" type="number" min="0" max="100" step="1" value="20" /></label>
+            <label for="leads">New leads per month <input id="leads" name="leads" type="number" inputmode="numeric" min="0" step="1" value="40" /></label>
+            <label for="deal-value">Average sale value (€) <input id="deal-value" name="dealValue" type="number" inputmode="decimal" min="0" step="50" value="1500" /></label>
+            <label for="close-rate">Current close rate (%) <input id="close-rate" name="closeRate" type="number" inputmode="decimal" min="0" max="100" step="1" value="15" /></label>
+            <label for="leak-rate">Leads delayed or unowned (%) <input id="leak-rate" name="leakRate" type="number" inputmode="decimal" min="0" max="100" step="1" value="20" /></label>
             <div class="result" aria-live="polite">
-              <span>Modeled monthly opportunity at risk</span>
+              <span>Modeled pipeline value exposed to delay</span>
               <strong id="result-value">€1,800</strong>
-              <small>This multiplies the four inputs. It does not predict recovered revenue.</small>
+              <small>This multiplies the four inputs as a directional proxy. It does not prove lost revenue or predict what can be recovered.</small>
             </div>
           </form>
         </div>
@@ -69,7 +69,7 @@
           <h2>A small operational repair, not a transformation project.</h2>
         </div>
         <div class="scope-card">
-          <p class="price"><span>Founding-client rate</span><strong>€290 fixed</strong><small>€99 to start · balance after the agreed test passes</small></p>
+          <p class="price"><span>Founding-client rate</span><strong>€290 fixed</strong><small>€99 booking payment · credited to the total</small></p>
           <ol class="scope-list">
             <li><span>01</span>Clean and deduplicate one contact list, up to 1,000 rows.</li>
             <li><span>02</span>Define five pipeline stages your team can actually use.</li>
@@ -77,6 +77,7 @@
             <li><span>04</span>Test the full path and deliver a one-page handoff guide.</li>
           </ol>
           <a class="button primary full" id="contact-link" href="mailto:kushdreams.genetics@gmail.com?subject=Lead%20Leak%20Rescue%20%E2%80%94%2072-hour%20fix&body=Hi%20Mauro%2C%0A%0AI%27d%20like%20to%20check%20whether%20the%2072-hour%20fix%20fits.%0A%0ACompany%3A%0ACurrent%20CRM%20or%20spreadsheet%3A%0AWhere%20new%20inquiries%20arrive%3A%0A">Check fit with Mauro</a>
+          <p class="fine-print">The 72-hour clock starts after scope, access, owner, and source data are confirmed. Acceptance means the agreed duplicate rules pass on a review sample, one test inquiry reaches the agreed owner/inbox, and the handoff guide is delivered. The €99 booking payment is refunded if I cannot deliver the agreed scope; delays caused by missing access or approvals pause the clock.</p>
           <p class="fine-print">Not included: CRM licenses, outbound campaigns, data enrichment, custom application development, legal/compliance certification, or access to data you have not approved. A backup/export is required before any list change.</p>
         </div>
       </section>
@@ -87,6 +88,15 @@
           <article><span>1</span><h3>Map</h3><p>We agree on the one list, one form, and one owner in a 20-minute call.</p></article>
           <article><span>2</span><h3>Repair</h3><p>I work inside your existing stack, with a reversible export before list changes.</p></article>
           <article><span>3</span><h3>Prove</h3><p>We submit a test inquiry together. Payment completes only after the agreed path passes.</p></article>
+        </div>
+      </section>
+
+      <section class="data-care shell" aria-labelledby="data-care-title">
+        <p class="eyebrow">Data handling</p>
+        <h2 id="data-care-title">Minimum access. Short retention. No resale.</h2>
+        <div class="data-grid">
+          <p>I request only the records and permissions required for the agreed sprint. I do not enrich, sell, reuse, or add your contacts to another service.</p>
+          <p>Where your system permits, work stays inside it. Any approved working export is deleted from my working devices within seven days after acceptance or cancellation. No subcontractor receives the data without your written approval.</p>
         </div>
       </section>
     </main>

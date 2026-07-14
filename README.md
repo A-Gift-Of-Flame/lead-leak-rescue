@@ -11,7 +11,9 @@ Within 72 hours:
 - connect one existing website form to one owner/inbox;
 - test the path and deliver a one-page handoff guide.
 
-Founding-client price: €290 fixed, with €99 to start and the balance after the agreed acceptance test passes. CRM subscriptions, campaigns, data enrichment, and custom software are out of scope.
+Founding-client price: €290 fixed, with a €99 booking payment credited to the total. The 72-hour clock starts after scope, access, owner, and source data are confirmed. Acceptance requires the agreed duplicate rules to pass on a review sample, one test inquiry to reach the agreed owner/inbox, and delivery of the handoff guide. The booking payment is refunded if the agreed scope cannot be delivered; missing client access or approvals pause the clock. CRM subscriptions, campaigns, data enrichment, and custom software are out of scope.
+
+Approved working exports are deleted from working devices within seven days after acceptance or cancellation. Contacts are not enriched, sold, reused, or shared with subcontractors without written approval.
 
 ## Local verification
 

@@ -55,7 +55,7 @@ h2 { font-size: clamp(2.2rem, 4vw, 4rem); }
 .calculator { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .calculator label { color: var(--muted); font-size: .83rem; font-weight: 700; }
 .calculator input { width: 100%; margin-top: 8px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); padding: 14px; font: inherit; border-radius: 3px; }
-.calculator input:focus { outline: 2px solid var(--lime); outline-offset: 2px; }
+.calculator input:focus-visible { outline: 2px solid var(--lime); outline-offset: 2px; }
 .result { grid-column: 1 / -1; display: grid; gap: 5px; border-left: 4px solid var(--lime); background: var(--lime-dark); padding: 22px; }
 .result span, .result small { color: var(--muted); }
 .result strong { font-size: clamp(2rem, 5vw, 3.8rem); letter-spacing: -.05em; }
@@ -77,6 +77,9 @@ h2 { font-size: clamp(2.2rem, 4vw, 4rem); }
 .steps article > span { color: var(--lime); font-family: ui-monospace, monospace; }
 .steps h3 { font-size: 1.5rem; margin: 20px 0 4px; }
 .steps p { color: var(--muted); margin: 0; }
+.data-care { padding-block: 90px; border-top: 1px solid var(--line); }
+.data-care h2 { max-width: 780px; }
+.data-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 34px; color: var(--muted); }
 .footer { display: flex; justify-content: space-between; gap: 20px; color: var(--muted); font-size: .78rem; padding-block: 30px; border-top: 1px solid var(--line); }
 
 @media (max-width: 800px) {
@@ -84,7 +87,7 @@ h2 { font-size: clamp(2.2rem, 4vw, 4rem); }
   .hero { padding-block: 64px; }
   .calculator { grid-template-columns: 1fr; }
   .result { grid-column: auto; }
-  .steps { grid-template-columns: 1fr; }
+  .steps, .data-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 520px) {
