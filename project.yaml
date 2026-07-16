@@ -1,0 +1,12 @@
+version: 1
+id: lead-leak-rescue
+name: Lead Leak Rescue
+repository: https://github.com/a-gift-of-flame/lead-leak-rescue
+publicUrl: https://a-gift-of-flame.github.io/lead-leak-rescue/
+runtime:
+  host: larvitar
+  directory: /home/agiftofflame/projects/work/money/lead-leak-rescue
+commands:
+  test: npm test
+  build: none
+  deploy: github-pages
