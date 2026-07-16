@@ -1,0 +1,18 @@
+version: 1
+projectId: lead-leak-rescue
+defaultDecision: deny
+actions:
+  website.read:
+    decision: allow
+  outreach.draft:
+    decision: allow
+  outreach.send:
+    decision: allow
+    maxQuantity: 5
+    aboveLimit: approval
+  spending.commit:
+    decision: approval
+  credentials.access:
+    decision: approval
+  destructive.execute:
+    decision: approval
