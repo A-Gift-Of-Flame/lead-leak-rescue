@@ -1,0 +1,21 @@
+version: 1
+projectId: lead-leak-rescue
+thresholds:
+  qualified: 40
+  shortlist: 60
+features:
+  offerFit:
+    weight: 10
+    maxValue: 5
+  verifiedContact:
+    weight: 15
+    maxValue: 1
+  recentIntent:
+    weight: 20
+    maxValue: 1
+  observableFriction:
+    weight: 5
+    maxValue: 3
+  suppressed:
+    weight: -100
+    maxValue: 1
