@@ -1,0 +1,31 @@
+version: 1
+projectId: lead-leak-rescue
+audiences:
+  smallServiceBusiness:
+    description: Small service businesses that receive website enquiries and depend on timely follow-up
+    approved: true
+positioning:
+  missedLeadRecovery:
+    audienceId: smallServiceBusiness
+    promise: Identify where website enquiries are being lost and provide a practical recovery plan
+    differentiator: Evidence-led review of observable enquiry routes without invented performance claims
+    approved: true
+claims:
+  enquiryRouteReview:
+    text: Reviews observable website enquiry routes and follow-up friction
+    evidenceRequired: true
+    approved: true
+  practicalRecoveryPlan:
+    text: Provides a practical prioritized recovery plan
+    evidenceRequired: false
+    approved: true
+channels:
+  website:
+    allowedAudiences: smallServiceBusiness
+    allowedClaims: enquiryRouteReview,practicalRecoveryPlan
+    approved: true
+  directEmail:
+    allowedAudiences: smallServiceBusiness
+    allowedClaims: enquiryRouteReview,practicalRecoveryPlan
+    approved: true
+
