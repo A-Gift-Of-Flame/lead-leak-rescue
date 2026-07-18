@@ -1,0 +1,22 @@
+version: 1
+projectId: lead-leak-rescue
+repository:
+  url: https://github.com/a-gift-of-flame/lead-leak-rescue.git
+  defaultBranch: main
+  continuationRef: main
+workspace:
+  host: larvitar
+  directory: /home/agiftofflame/projects/work/money/lead-leak-rescue
+commands:
+  build: none
+  test: npm test
+  lint: none
+  deploy: git push origin main
+  healthCheck: curl --fail --silent --show-error https://a-gift-of-flame.github.io/lead-leak-rescue/
+  rollback: git revert --no-edit {deploymentCommit}
+deployment:
+  provider: github-pages
+  publicUrl: https://a-gift-of-flame.github.io/lead-leak-rescue/
+  productionPolicy: approval
+  rollbackPolicy: approval
+
