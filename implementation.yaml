@@ -11,7 +11,7 @@ commands:
   build: none
   test: npm test
   lint: none
-  deploy: git push origin main
+  deploy: git push origin {deploymentCommit}:main
   healthCheck: curl --fail --silent --show-error https://a-gift-of-flame.github.io/lead-leak-rescue/
   rollback: git revert --no-edit {deploymentCommit}
 deployment:
@@ -19,4 +19,7 @@ deployment:
   publicUrl: https://a-gift-of-flame.github.io/lead-leak-rescue/
   productionPolicy: approval
   rollbackPolicy: approval
-
+promotion:
+  lowRiskPaths: app.js,index.html,styles.css,test/
+  securitySensitivePaths: implementation.yaml,policies.yaml,project.yaml,package.json,.github/
+  destructivePaths: ops/

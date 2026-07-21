@@ -1,6 +1,17 @@
 version: 1
 projectId: lead-leak-rescue
 defaultDecision: deny
+businessHours:
+  weekdays: mon,tue,wed,thu,fri
+  start: 09:00
+  end: 17:00
+  minimumLeadMinutes: 0
+sendLimits:
+  timezone: Europe/Brussels
+  mailbox: 10
+  recipientDomain: 2
+  project: 15
+  global: 20
 actions:
   website.read:
     decision: allow
@@ -10,6 +21,8 @@ actions:
     decision: allow
     maxQuantity: 5
     aboveLimit: approval
+  response.send:
+    decision: approval
   spending.commit:
     decision: approval
   credentials.access:

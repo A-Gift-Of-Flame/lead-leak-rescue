@@ -3,6 +3,7 @@ projectId: lead-leak-rescue
 thresholds:
   qualified: 40
   shortlist: 60
+ambiguityMargin: 10
 features:
   offerFit:
     weight: 10
