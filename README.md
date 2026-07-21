@@ -2,6 +2,10 @@
 
 A zero-dependency productized-service landing page and lead-value diagnostic.
 
+The site also includes a five-control lead-routing readiness check. It scores
+locally in the browser, creates a plain-text action report, and stores or sends
+nothing unless the visitor deliberately opens the prefilled fit-check email.
+
 ## Offer
 
 Within 72 hours:

@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { estimateOpportunity, formatEuro } from "../app.js";
+import { buildFitCheckMailto, buildReadinessReport, estimateOpportunity, formatEuro, scoreReadiness } from "../app.js";
 
 test("estimates modeled opportunity from the four inputs", () => {
   assert.equal(
@@ -18,4 +18,27 @@ test("bounds percentages and rejects invalid values", () => {
 test("formats whole euro values", () => {
   assert.match(formatEuro(1800), /1[,.]800|1\s800/);
   assert.match(formatEuro(1800), /€/);
+});
+
+test("readiness scoring is bounded and gaps retain operational priority", () => {
+  assert.deepEqual(scoreReadiness({ channels: true, stages: true }), {
+    score: 40,
+    gaps: [
+      "Each channel has one named owner",
+      "The team has a clear acknowledgement and follow-up expectation",
+      "A test enquiry is submitted on a recurring schedule",
+    ],
+  });
+  assert.equal(scoreReadiness({ channels: true, owners: true, expectation: true, stages: true, testing: true, invented: true }).score, 100);
+});
+
+test("readiness report and mailto contain only allowlisted operational results", () => {
+  const result = scoreReadiness({ channels: true, owners: true });
+  const report = buildReadinessReport({ ...result, gaps: [...result.gaps, "invented claim"] });
+  assert.match(report, /Score: 40\/100/);
+  assert.doesNotMatch(report, /invented claim/);
+  assert.match(report, /not a performance or revenue guarantee/);
+  const mailto = buildFitCheckMailto(result);
+  assert.match(mailto, /^mailto:DigitalCommunitySolutions@proton\.me\?/);
+  assert.match(decodeURIComponent(mailto), /Score: 40\/100/);
 });

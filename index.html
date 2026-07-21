@@ -14,7 +14,7 @@
         <span class="brand-mark" aria-hidden="true">LL</span>
         <span>Lead Leak Rescue</span>
       </a>
-      <a class="nav-link" href="#offer">The 72-hour fix</a>
+      <a class="nav-link" href="#readiness">Free readiness check</a>
     </header>
 
     <main id="top">
@@ -40,6 +40,36 @@
           <div class="route good"><span class="dot green"></span><span>Named owner</span><span class="status">routed</span></div>
           <p class="signal-note">One tested path. One accountable person. One short handoff guide.</p>
         </aside>
+      </section>
+
+      <section id="readiness" class="readiness-section">
+        <div class="shell readiness-grid">
+          <div>
+            <p class="eyebrow">Free 5-minute diagnostic</p>
+            <h2>Check the routing controls you already have.</h2>
+            <p>Mark only what is true today. The result stays in your browser and produces a plain-text action report you can keep.</p>
+          </div>
+          <form class="readiness-check" id="readiness-check">
+            <fieldset>
+              <legend>Current operating controls</legend>
+              <label><input type="checkbox" name="channels" /> Every enquiry channel is inventoried</label>
+              <label><input type="checkbox" name="owners" /> Each channel has one named owner</label>
+              <label><input type="checkbox" name="expectation" /> The team has a clear acknowledgement and follow-up expectation</label>
+              <label><input type="checkbox" name="stages" /> Pipeline stages have practical entry and exit rules</label>
+              <label><input type="checkbox" name="testing" /> A test enquiry is submitted on a recurring schedule</label>
+            </fieldset>
+            <div class="readiness-result" aria-live="polite">
+              <span>Routing readiness</span>
+              <strong id="readiness-score">0/100</strong>
+              <small id="readiness-summary">Five operational gaps to review.</small>
+            </div>
+            <div class="actions">
+              <button class="button primary" id="download-readiness" type="button">Download my report</button>
+              <a class="button secondary" id="readiness-fit" href="mailto:DigitalCommunitySolutions@proton.me">Check fit with Mauro</a>
+            </div>
+            <p class="fine-print">No answers are submitted or stored. The score is a simple count of the five controls above, not a performance or revenue guarantee.</p>
+          </form>
+        </div>
       </section>
 
       <section id="calculator" class="calculator-section">
